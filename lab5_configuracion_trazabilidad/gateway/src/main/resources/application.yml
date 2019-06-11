@@ -1,0 +1,75 @@
+info:
+  component: Edge Server
+
+
+server:
+  port: 8766
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+spring.sleuth.sampler.percentage: 1.0
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.atsistemas: 'DEBUG'
+    
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false # solo le habla a eureka pero no se registra
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    api-seguros-guadalupe:
+        path: /seguros/v1/**
+        serviceId: api-seguros-guadalupe
+        stripPrefix: false
+        sensitiveHeaders:
+
+    api-seguros-guadalupe-administracion:
+        path: /administracion/v1/**
+        serviceId: api-seguros-guadalupe-administracion
+        stripPrefix: false
+        sensitiveHeaders:
+
+    notification-service:
+        path: /notification/**
+        serviceId: notification-service
+        stripPrefix: false
+        sensitiveHeaders:    
+
+    ui-platform:
+        path: /**
+        serviceId: ui-platform
+        stripPrefix: false
+        sensitiveHeaders:

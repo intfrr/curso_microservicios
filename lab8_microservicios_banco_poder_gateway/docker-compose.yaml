@@ -1,0 +1,61 @@
+version: '3.3'
+services:
+  discovery-server:
+    image: jovaniac/eureka-discovery:0.0.1-snapshot
+    ports:
+      - 8761:8761
+  gateway-server:
+    image: jovaniac/api-gateway-server:0.0.1-snapshot
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    ports:
+      - 8766:8766
+    depends_on:
+      - discovery-server
+    links:
+      - discovery-server
+  monitor:
+    image: jovaniac/monitor-server:0.0.1-snapshot
+    ports:
+      - 8090:8090
+  postgres:
+    build: servicesData/postgresdb/
+    environment:
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - 5432:5432
+    volumes:
+      - ./blockstorage/postgres:/var/lib/postgresql/dataz
+  rabbitmq:
+    image: rabbitmq:3.6.12-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  api-seguros-guadalupe:
+    image: jovaniac/api-seguros-guadalupe:0.0.1-snapshot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_URL=http://monitor:8090
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+      - rabbitmq
+  api-seguros-guadalupe-administracion:
+    image: jovaniac/api-seguros-guadalupe-administracion:0.0.1-snapshot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe_administracion
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_BOOT_ADMIN_URL=http://monitor:8090
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres
+      - rabbitmq

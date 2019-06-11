@@ -1,0 +1,53 @@
+server:  
+  port: ${PORT:8082}
+  
+instance.id: ${random.value}
+
+
+eureka:
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true #registra ip no hostname
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    metadata-map:
+      instanceId: ${instance.id}
+  server:
+enableSelfPreservation: false
+
+spring:  
+ metrics:
+   export:
+     delay-millis: 1000
+     timeUnit: seconds
+     #interval: 1
+     #timeUnit: seconds
+     prefix: cliente
+     logger: com.microservicios.monitoreo
+     #includes: heap.used,heap.committed,mem,mem.free,threads,datasource.primary.active,datasource.primary.usage,gauge.response.persons,gauge.response.persons.id,gauge.response.persons.remove,gauge.firstservice
+
+ribbon:
+  eureka:
+    enabled: true
+
+
+
+influx:
+  host: localhost
+  port: 8086
+  user: admin
+  password: admin
+  database: grafana-creditos
+
+
+management:
+  security:
+    enabled: false #desactiva mecaniscos de actuator de spring
+
+security:
+  basic:
+    enabled: false

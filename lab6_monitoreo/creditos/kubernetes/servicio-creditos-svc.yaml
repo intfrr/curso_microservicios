@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: servicio-creditos-monitoreo
+spec:
+  type: LoadBalancer
+  selector:
+    # Esta etiqueta la usa k8s para buscar el pod
+    # al que le enviara el trafico. Un error aqui 
+    # hara que no funcione el ruteo.
+    app: servicio-creditos-monitoreo
+  ports:
+  - protocol: TCP
+    port: 8082
+    targetPort: 8082
+ 
+
+    
+
+    

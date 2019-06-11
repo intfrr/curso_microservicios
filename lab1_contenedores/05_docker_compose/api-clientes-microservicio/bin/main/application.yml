@@ -1,0 +1,17 @@
+
+server:  
+  port: ${PORT:8081}
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+    url: jdbc:postgresql://localhost:5433/bank_ito
+
+  jpa:
+    hibernate:
+      ddlAuto: validate
+      namingStrategy: org.hibernate.cfg.EJB3NamingStrategy
+    show-sql: true
+

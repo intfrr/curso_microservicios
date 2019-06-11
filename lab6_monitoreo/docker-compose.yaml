@@ -1,0 +1,45 @@
+version: '3.3'
+services:
+  discovery-server:
+    image: jovaniac/eureka-discovery:0.0.1-snapshot
+    ports:
+      - 8761:8761
+  influxdb:
+    image: influxdb:1.3.7-alpine
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DATA_ENGINE=tsm1
+    volumes:
+      - ./influx-data/influxdb:/var/lib/influxdb
+    restart: always
+  grafana:
+    image: grafana/grafana:4.6.0
+    ports:
+       - "3000:3000"
+    depends_on:
+       - influxdb
+    links:
+       - influxdb
+    restart: always
+  servicio-cliente:
+    image: jovaniac/servicio-cliente-monitor:0.0.1-monitoreo
+    environment:
+      - INFLUX_HOST=influxdb
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    ports:
+      - "8081:8081"
+    links:
+      - discovery-server
+      - influxdb
+  servicio-creditos:
+    image: jovaniac/servicio-creditos-monitor:0.0.1-monitoreo
+    environment:
+      - INFLUX_HOST=influxdb
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+    ports:
+      - "8082:8082"
+    links:
+      - discovery-server
+      - influxdb
+  

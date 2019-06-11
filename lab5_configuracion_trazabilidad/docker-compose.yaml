@@ -1,0 +1,61 @@
+version: '3.3'
+services:
+  discovery-server:
+    image: jovaniac/eureka-discovery-trazabilidad:0.0.1-snapshot
+    ports:
+      - 8761:8761
+  gateway-server:
+    image: jovaniac/api-gateway-server-trazabilidad:0.0.1-snapshot
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - ZIPKIN_ENDPOINT=http://zipkin:9411/
+    ports:
+      - 8766:8766
+    links:
+      - discovery-server
+      - zipkin
+  postgres:
+    build: servicesData/postgresdb/
+    environment:
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - 5432:5432
+    volumes:
+      - ./blockstorage/postgres:/var/lib/postgresql/dataz
+  zipkin:
+    image: openzipkin/zipkin:1.31
+    ports:
+      - 9411:9411
+  api-seguros-guadalupe:
+    image: jovaniac/api-seguros-guadalupe-trazabilidad:0.0.1-snapshot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - ZIPKIN_ENDPOINT=http://zipkin:9411/
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    links:
+      - discovery-server
+      - zipkin
+  api-seguros-guadalupe-administracion:
+    image: jovaniac/api-seguros-guadalupe-administracion-trazabilidad:0.0.1-snapshot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe_administracion
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+      - ZIPKIN_ENDPOINT=http://zipkin:9411/
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres
+    links:
+      - discovery-server
+      - zipkin
+      
+  
+

@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: servicio-creditos-monitoreo
+  labels:
+    app: servicio-creditos-monitoreo
+spec:
+  selector:
+    matchLabels:
+      app: servicio-creditos-monitoreo
+  template:
+    metadata:
+      labels:
+        app: servicio-creditos-monitoreo
+    spec:
+      containers:
+        - name: servicio-creditos-monitoreo
+          image: jovaniac/servicio-creditos:0.0.1-monitoreo
+          ports:
+            - containerPort: 8082
+              protocol: TCP
+
+              

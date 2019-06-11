@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: servicio-cliente-monitoreo
+  labels:
+    app: servicio-cliente-monitoreo
+spec:
+  selector:
+    matchLabels:
+      app: servicio-cliente-monitoreo
+  template:
+    metadata:
+      labels:
+        app: servicio-cliente-monitoreo
+    spec:
+      containers:
+        - name: servicio-cliente-monitoreo
+          image: jovaniac/servicio-cliente:0.0.1-monitoreo
+          ports:
+            - containerPort: 8081
+              protocol: TCP

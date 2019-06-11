@@ -1,0 +1,39 @@
+server:
+  port: 8888  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+  profiles:
+     active: native
+  security:
+    user:
+      password: ${CONFIG_SERVICE_PASSWORD}
+---
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+    - github
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jovaniac/curso_microservicios_config-server
+          skipSslValidation: true
+          
+# Discovery Server Access
+eureka-server:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+  cloud: 
+    config: 
+      discovery: 
+        enabled: true

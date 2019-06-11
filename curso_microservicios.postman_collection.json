@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "99cee0e1-ca0f-444b-82f0-43f401f04fed",
+		"name": "curso_microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "contenedores",
+			"item": [
+				{
+					"name": "API Rest Clientes post 201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"jovani\",\n    \"apellidoPaterno\": \"arzate\",\n    \"apellidoMaterno\": \"cabrera\",\n    \"email\": \"jovaniac@gmail.com\",\n    \"direccion\": \"test\",\n    \"genero\": \"h\",\n    \"edad\": 29\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Rest Clientes get 200",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"jovani\",\n    \"apellidoPaterno\": \"arzate\",\n    \"apellidoMaterno\": \"cabrera\",\n    \"email\": \"jovaniac@gmail.com\",\n    \"direccion\": \"test\",\n    \"genero\": \"h\",\n    \"edad\": 29\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/clientes/789070915",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"789070915"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Rest Clientes delete 200",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"jovani\",\n    \"apellidoPaterno\": \"arzate\",\n    \"apellidoMaterno\": \"cabrera\",\n    \"email\": \"jovaniac@gmail.com\",\n    \"direccion\": \"test\",\n    \"genero\": \"h\",\n    \"edad\": 29\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/clientes/789070915",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"789070915"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comunicacion_http",
+			"item": [
+				{
+					"name": "API Seguros POST 201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/seguros/v1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"seguros",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Seguros GET 200 By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/seguros/v1/a6209c9c-b262-47c7-82de-c982b79e7803",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"seguros",
+								"v1",
+								"a6209c9c-b262-47c7-82de-c982b79e7803"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Seguros Catalogos GET 200",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/seguros/v1/catalogos",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"seguros",
+								"v1",
+								"catalogos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Adm Polizas PUT 200 Confirmacion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idAutorizacion\":\"940cf456-d869-4066-a98c-b967afbd5052\",\n\t\"confirmacion\":\"false\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/administracion/v1/autorizaciones/confirmaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"administracion",
+								"v1",
+								"autorizaciones",
+								"confirmaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Adm Polizas get 200 Autorizaciones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/administracion/v1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"administracion",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Adm Polizas get 200 Autorizaciones ById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8082/administracion/v1/e936f107-bc5d-44e5-9487-e1705085fbdb",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"administracion",
+								"v1",
+								"e936f107-bc5d-44e5-9487-e1705085fbdb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comunicacion_gateway",
+			"item": [
+				{
+					"name": "API Seguros POST 201",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "secreto",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8766/seguros/v1",
+							"host": [
+								"localhost"
+							],
+							"port": "8766",
+							"path": [
+								"seguros",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Seguros GET 200",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"plazo\":\"1.5\",\n\t\"precioPoliza\":\"6.900\",\n\t\"tipoCobertura\":\"1\",\n\t\"vencimiento\":\"2021-01-01\",\n\t\"sumaAsegurada\":\"250.000\",\n\t\"nombre\":\"Erika\",\n\t\"apellidoPaterno\":\"Ramirez\",\n\t\"apellidoMaterno\":\"Acosta\",\n\t\"fechaNacimiento\":\"01-08-1990\",\n\t\"sexo\":\"M\",\n\t\"ingresosAnuales\":\"100.000\",\n\t\"direccion\":\"10 de abril, #20, cuernavaca morelos\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8766/seguros/v1/97c91de0-d2a0-4e6e-ac9d-164e1fbbb9ea",
+							"host": [
+								"localhost"
+							],
+							"port": "8766",
+							"path": [
+								"seguros",
+								"v1",
+								"97c91de0-d2a0-4e6e-ac9d-164e1fbbb9ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Adm Polizas PUT 200 Confirmacion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idAutorizacion\":\"eb55a057-c02c-4af1-a55f-92fd3f255722\",\n\t\"confirmacion\":\"true\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8766/administracion/v1/autorizaciones/confirmaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "8766",
+							"path": [
+								"administracion",
+								"v1",
+								"autorizaciones",
+								"confirmaciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "monitoreo",
+			"item": [
+				{
+					"name": "API Clientes post 201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"apellidoMaterno\": \"cabrera\",\n \"apellidoPaterno\": \"arzate\",\n \"direccion\": \"test\",\n \"edad\": 29,\n \"email\": \"jovaniac@gmail.com\",\n \"genero\": \"h\",\n \"nombre\": \"jovani\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Clientes Creditos post 201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"montoCredito\": \"30000\",\n \"folioCliente\": \"-2120306162\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/clientes/-2120306162/creditos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"-2120306162",
+								"creditos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

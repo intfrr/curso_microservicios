@@ -1,0 +1,31 @@
+Requerimientos para la parte de microservicios:
+
+Features Sistema operativo:
+mac,linux ubuntu 16,18,19, no recomendable windows, se puede pero no se compliquen la vida.
+permisos root
+8 o más de ram
+en linux tratar de que sea nativo el SO, si es virtual asignar toda la ram posible
+
+java 8
+gradle 
+maven
+skdman
+docker permisos con sudo
+docker-compose permisos con sudo
+kubectl
+npm
+gcloud - cliente para google
+
+herramientas:
+visual studio + plugin swagger viewer o swagger online
+sublime text
+eclipse sts
+dbeaver - clientes de multiples bases de datos
+postman, curl o httpie
+
+Extras:
+cuenta de google cloud platform : google console - les pedirá tarjeta y les dara $300 USD
+cuenta en dockerhub : https://hub.docker.com/
+crear cuenta en apigee : https://login.apigee.com/sign__up?int_source=website&int_medium=top-nav&int_campaign=trial
+
+

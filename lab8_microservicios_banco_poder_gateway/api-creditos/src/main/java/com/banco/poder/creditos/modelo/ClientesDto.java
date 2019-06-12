@@ -1,105 +1,98 @@
 package com.banco.poder.creditos.modelo;
 
+import java.util.List;
+
 public class ClientesDto {
 
-	private String id;
-	private String nombre;
-	private String apellidoPaterno;
-	private String apellidoMaterno;
-	private Integer edad;
-	private String rfc;
-	private String email;
-	private String direccion;
-	private String codigoPostal;
-	private String referencias;
-	private String genero;
+	private String idCredito;
+	private String fecha;
+	private String pais;
+	private String canal;
+	private SucursalDto sucursal;
+	private String cliente;
+	private String producto;
+	private Double monto;
+	private Integer plazo;
+	private List<ReferenciasDto> referencias;
 
-	public String getId() {
-		return id;
+	public String getIdCredito() {
+		return idCredito;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setIdCredito(String idCredito) {
+		this.idCredito = idCredito;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getFecha() {
+		return fecha;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
 	}
 
-	public String getApellidoPaterno() {
-		return apellidoPaterno;
+	public String getPais() {
+		return pais;
 	}
 
-	public void setApellidoPaterno(String apellidoPaterno) {
-		this.apellidoPaterno = apellidoPaterno;
+	public void setPais(String pais) {
+		this.pais = pais;
 	}
 
-	public String getApellidoMaterno() {
-		return apellidoMaterno;
+	public String getCanal() {
+		return canal;
 	}
 
-	public void setApellidoMaterno(String apellidoMaterno) {
-		this.apellidoMaterno = apellidoMaterno;
+	public void setCanal(String canal) {
+		this.canal = canal;
 	}
 
-	public Integer getEdad() {
-		return edad;
+	public SucursalDto getSucursal() {
+		return sucursal;
 	}
 
-	public void setEdad(Integer edad) {
-		this.edad = edad;
+	public void setSucursal(SucursalDto sucursal) {
+		this.sucursal = sucursal;
 	}
 
-	public String getRfc() {
-		return rfc;
+	public String getCliente() {
+		return cliente;
 	}
 
-	public void setRfc(String rfc) {
-		this.rfc = rfc;
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getProducto() {
+		return producto;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setProducto(String producto) {
+		this.producto = producto;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public Double getMonto() {
+		return monto;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setMonto(Double monto) {
+		this.monto = monto;
 	}
 
-	public String getCodigoPostal() {
-		return codigoPostal;
+	public Integer getPlazo() {
+		return plazo;
 	}
 
-	public void setCodigoPostal(String codigoPostal) {
-		this.codigoPostal = codigoPostal;
+	public void setPlazo(Integer plazo) {
+		this.plazo = plazo;
 	}
 
-	public String getReferencias() {
+	public List<ReferenciasDto> getReferencias() {
 		return referencias;
 	}
 
-	public void setReferencias(String referencias) {
+	public void setReferencias(List<ReferenciasDto> referencias) {
 		this.referencias = referencias;
-	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
 	}
 
 }

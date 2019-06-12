@@ -1,4 +1,4 @@
-package com.hazloakki.negocio.persist;
+package com.banco.poder.creditos;
 
 import java.util.UUID;
 

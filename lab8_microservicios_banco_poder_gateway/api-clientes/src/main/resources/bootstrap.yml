@@ -1,3 +1,3 @@
 spring:
   application:
-    name: api-seguros-guadalupe
+    name: api-clientes

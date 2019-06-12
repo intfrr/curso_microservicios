@@ -21,12 +21,12 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: com.bmuschko.gradle.docker.DockerRemoteApiPlugin
 
 
-group = 'com.segurosguadalupe'
+group = 'com.banco.poder.clientes'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 jar {
-  baseName = 'api-seguros-guadalupe'
+  baseName = 'api-clientes'
   version = ''
 }
 
@@ -45,7 +45,6 @@ dependencies {
   compile('org.springframework.boot:spring-boot-starter-data-jpa')
   runtime('org.postgresql:postgresql')
   compile('org.flywaydb:flyway-core')
-  compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
   compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
   compile('de.codecentric:spring-boot-admin-starter-client') 
@@ -65,17 +64,17 @@ task createDockerfile(type: com.bmuschko.gradle.docker.tasks.image.Dockerfile) {
   destFile = project.file('build/libs/Dockerfile')
   from 'openjdk:8u151-jre-slim'
   maintainer 'jovaniac@gmail.com"'
-  copyFile 'api-seguros-guadalupe.jar', '/opt/api-seguros-guadalupe.jar'
+  copyFile 'api-clientes.jar', '/opt/api-clientes.jar'
 
-  exposePort 8081
-  entryPoint 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/opt/api-seguros-guadalupe.jar'
+  exposePort 8084
+  entryPoint 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/opt/api-clientes.jar'
 }
 
 
 task buildImage(type: com.bmuschko.gradle.docker.tasks.image.DockerBuildImage) {
   dependsOn createDockerfile
   inputDir = createDockerfile.destFile.parentFile
-  tag = 'jovaniac/api-seguros-guadalupe-gateway:' + project.version.toLowerCase()
+  tag = 'jovaniac/api-clientes-gateway:' + project.version.toLowerCase()
 }
 
 task pushImage(type: com.bmuschko.gradle.docker.tasks.image.DockerPushImage) {

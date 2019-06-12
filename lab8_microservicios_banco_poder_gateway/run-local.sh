@@ -1,27 +1,13 @@
 #!/usr/bin/env bash
 
 
+
 cd discovery-server
 ./generaImagen.sh
 
 cd ../
 
-cd gateway
-./generaImagen.sh
-
-cd ../
-
-cd monitor-server
-./generaImagen.sh
-
-cd ../
-
-cd api-adm-autorizaciones
-./generaImagen.sh
-
-cd ../
-
-cd api-seguros
+cd api-clientes
 ./generaImagen.sh
 
 cd ../

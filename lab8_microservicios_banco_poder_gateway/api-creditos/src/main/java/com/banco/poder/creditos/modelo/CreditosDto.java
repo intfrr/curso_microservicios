@@ -2,7 +2,7 @@ package com.banco.poder.creditos.modelo;
 
 import java.util.List;
 
-public class ClientesDto {
+public class CreditosDto {
 
 	private String idCredito;
 	private String fecha;

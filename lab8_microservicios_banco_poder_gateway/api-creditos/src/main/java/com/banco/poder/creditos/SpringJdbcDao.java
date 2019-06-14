@@ -12,7 +12,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
  * @author Jovani Arzate
  *
  */
-
 public class SpringJdbcDao {
 
 	protected UUID uuid;

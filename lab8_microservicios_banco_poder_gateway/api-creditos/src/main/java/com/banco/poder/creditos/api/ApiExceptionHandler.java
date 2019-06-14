@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.banco.poder.creditos.service.ClientesNoEncontradoException;
+import com.banco.poder.creditos.service.CreditosNoEncontradoException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestControllerAdvice
@@ -17,8 +17,8 @@ public class ApiExceptionHandler {
 	@Autowired
 	private ObjectMapper objectMapper;
 
-	@ExceptionHandler(ClientesNoEncontradoException.class)
-	public HttpEntity notFound(ClientesNoEncontradoException exception) {
+	@ExceptionHandler(CreditosNoEncontradoException.class)
+	public HttpEntity notFound(CreditosNoEncontradoException exception) {
 
 		HashMap<String, Object> body = new HashMap<>();
 		body.put("id", exception.getId());

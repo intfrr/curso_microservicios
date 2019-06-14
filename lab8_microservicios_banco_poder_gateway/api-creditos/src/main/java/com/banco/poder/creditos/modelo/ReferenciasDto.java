@@ -1,11 +1,20 @@
 package com.banco.poder.creditos.modelo;
 
 public class ReferenciasDto {
-
+	
+	private String id;
 	private String nombre;
 	private String apellidos;
 	private String tipoReferencia;
 	private Integer aniosConocimiento;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getNombre() {
 		return nombre;

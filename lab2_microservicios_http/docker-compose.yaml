@@ -9,7 +9,7 @@ services:
     volumes:
       - ./blockstorage/postgres:/var/lib/postgresql/dataz
   api-seguros-guadalupe:
-    image: jovaniac/api-seguros-guadalupe:0.0.1-snapshot
+    image: jovaniac/api-seguros-guadalupe-http:0.0.1-snapshot
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe
     ports:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - postgres
   api-seguros-guadalupe-administracion:
-    image: jovaniac/api-seguros-guadalupe-administracion:0.0.1-snapshot
+    image: jovaniac/api-seguros-guadalupe-administracion-http:0.0.1-snapshot
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe_administracion
     ports:

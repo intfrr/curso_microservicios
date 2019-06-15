@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: holamundo
+  labels:
+    app: holamundo
+spec:
+  #replicas: 1
+  selector:
+    matchLabels:
+      app: holamundo
+  template:
+    metadata:
+      labels:
+        app: holamundo
+    spec:
+      containers:
+        - name: holamundo
+          image: jovaniac/server-app:0.1
+          ports:
+            - containerPort: 5000

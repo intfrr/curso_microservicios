@@ -6,7 +6,9 @@ import com.banco.poder.creditos.modelo.PagosDto;
 
 public interface PagosRepository {
 
-	List<PagosDto> obtenerTodo(String id);
+	List<PagosDto> consultarTodo(String id);
+	
+	PagosDto consultarById(String id);
 
-	PagosDto persistir(PagosDto pagosDto);
+	PagosDto persistir(PagosDto pagosDto,String idCredito);
 }

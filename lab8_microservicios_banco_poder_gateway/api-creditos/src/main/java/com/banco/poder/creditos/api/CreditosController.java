@@ -2,6 +2,9 @@ package com.banco.poder.creditos.api;
 
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
+
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +16,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.banco.poder.creditos.modelo.AprobacionDto;
 import com.banco.poder.creditos.modelo.CreditosDto;
+import com.banco.poder.creditos.modelo.DetallePagosDto;
+import com.banco.poder.creditos.modelo.PagosDto;
+import com.banco.poder.creditos.modelo.SaldoDto;
 import com.banco.poder.creditos.modelo.TemplateResponse;
+import com.banco.poder.creditos.service.AprobacionesService;
 import com.banco.poder.creditos.service.CreditosServiceImpl;
+import com.banco.poder.creditos.service.PagosService;
 
 @RestController
 @RequestMapping("creditos/v1")
@@ -24,9 +33,14 @@ public class CreditosController {
 	private static final Logger log = Logger.getLogger(CreditosController.class);
 
 	private CreditosServiceImpl creditosServiceImpl;
+	private AprobacionesService aprobacionesService;
+	private PagosService pagosService;
 
-	public CreditosController(CreditosServiceImpl creditosServiceImpl) {
+	public CreditosController(CreditosServiceImpl creditosServiceImpl, AprobacionesService aprobacionesService,
+			PagosService pagosService) {
 		this.creditosServiceImpl = creditosServiceImpl;
+		this.aprobacionesService = aprobacionesService;
+		this.pagosService = pagosService;
 	}
 
 	@PostMapping
@@ -77,13 +91,66 @@ public class CreditosController {
 
 	@PostMapping("/aprobaciones")
 	@ResponseStatus(CREATED)
-	public TemplateResponse aprobaciones(@RequestBody CreditosDto creditosDto) {
-		log.info(">>> creditos/v1 aprobaciones");
+	public TemplateResponse crearAprobacion(@RequestBody AprobacionDto aprobacionDto) {
+		log.info(">>> creditos/v1 crearAprobacion");
 
-		CreditosDto creditos = creditosServiceImpl.guardar(creditosDto);
+		aprobacionesService.guardar(aprobacionDto);
 
-		TemplateResponse response = new TemplateResponse("Se realizo la autorizacion del credito", "201", creditos);
+		TemplateResponse response = new TemplateResponse("Procesando autorizacion de credito", "201", "");
 
 		return response;
 	}
+
+	@GetMapping("/aprobaciones")
+	@ResponseStatus(OK)
+	public List<AprobacionDto> aprobacionesTodo() {
+		log.info(">>> creditos/v1 aprobacionesTodo");
+
+		return aprobacionesService.obtenerTodo();
+	}
+
+	@GetMapping("/aprobaciones/{id}")
+	@ResponseStatus(OK)
+	public AprobacionDto aprobaciones(@PathVariable("id") String id) {
+		log.info(">>> creditos/v1 aprobaciones");
+
+		return aprobacionesService.obtenerById(id);
+	}
+
+	@GetMapping("/{id}/saldos")
+	@ResponseStatus(OK)
+	public SaldoDto saldos(@PathVariable("id") String id) {
+		log.info(">>> creditos/v1 saldos");
+
+		return creditosServiceImpl.obtenerSaldo(id);
+	}
+
+	@PostMapping("/pagos")
+	@ResponseStatus(CREATED)
+	public TemplateResponse pagos(@RequestBody PagosDto pagosDto) {
+		log.info(">>> creditos/v1 pagos");
+
+		PagosDto pagosDto2 = pagosService.guardar(pagosDto);
+
+		TemplateResponse response = new TemplateResponse("El pago se realizo exitosamente", "201", pagosDto2);
+
+		return response;
+	}
+	
+	@GetMapping("/pagos/{id}")
+	@ResponseStatus(OK)
+	public PagosDto pagosById(@PathVariable("id") String id) {
+		log.info(">>> creditos/v1 pagosById");
+
+		return pagosService.obtenerById(id);
+	}
+
+	@GetMapping("/{id}/pagos")
+	@ResponseStatus(OK)
+	public DetallePagosDto detallePagos(@PathVariable("id") String id) {
+		log.info(">>> creditos/v1 detallePagos");
+
+		return pagosService.obtenerDetalle(id);
+	}
+
 }

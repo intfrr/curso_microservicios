@@ -2,10 +2,19 @@ package com.banco.poder.creditos.modelo;
 
 public class PagosDto {
 
+	private String idCredito;
 	private String idPago;
 	private String fecha;
 	private String concepto;
 	private Double importe;
+
+	public String getIdCredito() {
+		return idCredito;
+	}
+
+	public void setIdCredito(String idCredito) {
+		this.idCredito = idCredito;
+	}
 
 	public String getIdPago() {
 		return idPago;

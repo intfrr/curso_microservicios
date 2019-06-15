@@ -131,7 +131,7 @@ CREATE TABLE credito_autorizaciones (
   id_credito VARCHAR(255) NOT NULL,
   estatus BOOLEAN NOT NULL DEFAULT FALSE,
   fecha VARCHAR(255) NOT NULL,
-  fecha_confirmacion VARCHAR(255) NOT NULL,
+  fecha_confirmacion VARCHAR(255),
   PRIMARY KEY(id, id_credito),
   FOREIGN KEY (id_credito) REFERENCES creditos (id_credito)
 );

@@ -1,4 +1,4 @@
-package com.banco.poder.creditos.service;
+package com.banco.poder.creditos.excepciones;
 
 public class CreditosNoEncontradoException extends RuntimeException {
   private final String id;

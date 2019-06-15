@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   discovery-server:
-    image: jovaniac/eureka-discovery:0.0.1-snapshot
+    image: jovaniac/eureka-discovery-monitoreo:0.0.1-snapshot
     ports:
       - 8761:8761
   postgres:
@@ -18,11 +18,11 @@ services:
       - "15672:15672"
       - "5672:5672"
   monitor:
-    image: jovaniac/monitor-server:0.0.1-snapshot
+    image: jovaniac/monitor-server-admin:0.0.1-snapshot
     ports:
       - 8090:8090
   api-seguros-guadalupe:
-    image: jovaniac/api-seguros-guadalupe:0.0.1-snapshot
+    image: jovaniac/api-seguros-guadalupe-monitoreo:0.0.1-snapshot
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe
       - SPRING_DATASOURCE_USERNAME=admin
@@ -36,7 +36,7 @@ services:
       - postgres
       - rabbitmq
   api-seguros-guadalupe-administracion:
-    image: jovaniac/api-seguros-guadalupe-administracion:0.0.1-snapshot
+    image: jovaniac/api-seguros-guadalupe-administracion-monitoreo:0.0.1-snapshot
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/seguros_guadalupe_administracion
       - SPRING_DATASOURCE_USERNAME=admin

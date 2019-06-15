@@ -50,7 +50,7 @@ services:
     - GITLAB_HTTPS=false
     - SSL_SELF_SIGNED=false
 
-    - GITLAB_HOST=git-training.circulosiete.com
+    - GITLAB_HOST=git-mihost.com
     - GITLAB_PORT=10080
     - GITLAB_SSH_PORT=10022
     - GITLAB_RELATIVE_URL_ROOT=
@@ -59,20 +59,20 @@ services:
     - GITLAB_SECRETS_OTP_KEY_BASE=dskjgfjwgdsdasbhjdfsmwquayvmjhh
 
     - GITLAB_ROOT_PASSWORD=supersecreto
-    - GITLAB_ROOT_EMAIL=domingo@circulosiete.com
+    - GITLAB_ROOT_EMAIL=jovaniac@gmail.com
 
     - GITLAB_NOTIFY_ON_BROKEN_BUILDS=true
     - GITLAB_NOTIFY_PUSHER=false
 
-    - GITLAB_EMAIL=training-bot-gitlab@circulosiete.com
-    - GITLAB_EMAIL_REPLY_TO=training-bot-gitlab@circulosiete.com
-    - GITLAB_INCOMING_EMAIL_ADDRESS=training-bot-gitlab@circulosiete.com
+    - GITLAB_EMAIL=jovaniac@gmail.com
+    - GITLAB_EMAIL_REPLY_TO=jovaniac@gmail.com
+    - GITLAB_INCOMING_EMAIL_ADDRESS=jovaniac@gmail.com
 
     - GITLAB_BACKUP_SCHEDULE=daily
     - GITLAB_BACKUP_TIME=01:00
 
     - SMTP_ENABLED=true
-    - SMTP_DOMAIN=circulosiete.com
+    - SMTP_DOMAIN=midominio.com
     - SMTP_HOST=smtp.foo.net
     - SMTP_PORT=587
     - SMTP_USER=fsdfh

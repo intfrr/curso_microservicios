@@ -379,10 +379,6 @@ definitions:
         type: string
         description: Identificador del Credito solicitado
         example: "1100305940"
-      idCliente:
-        type: string
-        description: Identificador del cliente
-        example: "391849"
 
   solicitudCreditoResponse:
     type: object

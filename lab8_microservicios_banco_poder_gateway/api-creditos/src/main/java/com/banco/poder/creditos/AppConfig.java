@@ -12,15 +12,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.jdbc.datasource.init.DataSourceInitializer;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan
 @EnableTransactionManagement
-@PropertySource("classpath:application.yml")
+@PropertySource("classpath:application.properties")
 public class AppConfig {
 	@Autowired
 	private Environment env;
@@ -62,16 +65,14 @@ public class AppConfig {
 		return dataSource;
 	}
 
-	// @Bean
-	// public DataSourceInitializer dataSourceInitializer(DataSource dataSource)
-	// {
-	// DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
-	// dataSourceInitializer.setDataSource(dataSource);
-	// ResourceDatabasePopulator databasePopulator = new
-	// ResourceDatabasePopulator();
-	// databasePopulator.addScript(new ClassPathResource("data.sql"));
-	// dataSourceInitializer.setDatabasePopulator(databasePopulator);
-	// dataSourceInitializer.setEnabled(Boolean.parseBoolean(initDatabase));
-	// return dataSourceInitializer;
-	// }
+//	@Bean
+//	public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
+//		DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+//		dataSourceInitializer.setDataSource(dataSource);
+//		ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator();
+//		databasePopulator.addScript(new ClassPathResource("data.sql"));
+//		dataSourceInitializer.setDatabasePopulator(databasePopulator);
+//		dataSourceInitializer.setEnabled(Boolean.parseBoolean(initDatabase));
+//		return dataSourceInitializer;
+//	}
 }

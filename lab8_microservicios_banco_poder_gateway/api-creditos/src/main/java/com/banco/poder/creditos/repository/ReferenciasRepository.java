@@ -11,4 +11,6 @@ public interface ReferenciasRepository {
 	ReferenciasDto buscarById(String id, String idCredito);
 
 	List<ReferenciasDto> buscarTodo(String id);
+
+	void eliminar(String idCredito);
 }

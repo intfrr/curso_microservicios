@@ -40,18 +40,15 @@ ext {
 }
 
 dependencies {
-  compile('org.springframework.boot:spring-boot-starter-actuator')
+ compile('org.springframework.boot:spring-boot-starter-actuator')
   compile('org.springframework.boot:spring-boot-starter-web')
-  compile('org.springframework.boot:spring-boot-starter-data-jpa')
+  compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+  testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
   runtime('org.postgresql:postgresql')
   compile('org.flywaydb:flyway-core')
-	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
-  compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
-  compile('de.codecentric:spring-boot-admin-starter-client') 
-  compile('org.springframework.cloud:spring-cloud-starter-eureka')
-  runtime 'org.jolokia:jolokia-core' 
-  compile 'io.dropwizard.metrics:metrics-core'
-    compile('org.springframework.boot:spring-boot-starter-jdbc')
+  compile('de.codecentric:spring-boot-admin-starter-client')
+  compile('org.springframework.boot:spring-boot-starter-jdbc')
   compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.2.2'
 }
 

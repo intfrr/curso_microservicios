@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-
-
 cd discovery-server
-./generaImagen.sh
-
-cd ../
-
-cd api-clientes
 ./generaImagen.sh
 
 cd ../

@@ -3,7 +3,7 @@ package com.banco.poder.creditos.api;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,8 +22,12 @@ import com.banco.poder.creditos.service.CreditosServiceImpl;
 public class CreditosController {
 
 	private static final Logger log = Logger.getLogger(CreditosController.class);
-	@Autowired
+
 	private CreditosServiceImpl creditosServiceImpl;
+
+	public CreditosController(CreditosServiceImpl creditosServiceImpl) {
+		this.creditosServiceImpl = creditosServiceImpl;
+	}
 
 	@PostMapping
 	@ResponseStatus(CREATED)
@@ -57,7 +61,20 @@ public class CreditosController {
 		return response;
 
 	}
-	
+
+	@DeleteMapping("/{id}")
+	@ResponseStatus(OK)
+	public TemplateResponse borrarCreditoById(@PathVariable("id") String id) {
+		log.info(">>> creditos/v1 borrarCreditoById ");
+
+		creditosServiceImpl.borrar(id);
+
+		TemplateResponse response = new TemplateResponse("La solicitud de credito se ha dado de baja exitosamente",
+				"200", "");
+
+		return response;
+	}
+
 	@PostMapping("/aprobaciones")
 	@ResponseStatus(CREATED)
 	public TemplateResponse aprobaciones(@RequestBody CreditosDto creditosDto) {

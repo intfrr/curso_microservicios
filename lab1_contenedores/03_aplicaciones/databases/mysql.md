@@ -20,6 +20,7 @@ secret
 show databases;
 
 create database bank_ito;
+
 use bank_ito;
 show tables;
 create table clientes(id int, nombre varchar(500));

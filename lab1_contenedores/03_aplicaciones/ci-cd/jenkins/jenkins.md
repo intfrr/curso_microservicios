@@ -1,11 +1,5 @@
 
-docker run \
-  --rm \
-  -u root \
-  -p 8090:8080 \
-  -v "$PWD":/var/jenkins_home \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  jenkinsci/blueocean
+docker run --rm  -u root -p 8090:8080 -v "$PWD":/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
 
 
   ¿Cómo configuro una app?

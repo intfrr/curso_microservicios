@@ -9,7 +9,7 @@ services:
     volumes:
       - ./blockstorage/postgres:/var/lib/postgresql/dataz
   clientes-microservicio:
-    image: jovaniac/cliente-ms:0.0.1-snapshot
+    image: jovaniac/cliente-ms-compose:0.0.1-snapshot
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/bank_ito
     ports:

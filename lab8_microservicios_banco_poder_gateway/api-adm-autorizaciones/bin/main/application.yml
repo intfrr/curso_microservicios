@@ -33,11 +33,14 @@ feign:
         enabled: true
 
 spring:
+  boot:
+      admin:
+         url: http://localhost:8090/
   datasource:
     driver-class-name: org.postgresql.Driver
     username: admin
     password: admin
-    url: jdbc:postgresql://localhost:5432/seguros_guadalupe_administracion
+    url: jdbc:postgresql://localhost:5432/banca_administracion
 
   jpa:
     hibernate:

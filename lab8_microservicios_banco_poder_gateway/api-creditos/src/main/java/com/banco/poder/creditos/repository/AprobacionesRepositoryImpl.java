@@ -16,6 +16,7 @@ public class AprobacionesRepositoryImpl extends SpringJdbcDao implements Aprobac
 	private String qryInsert = "INSERT INTO credito_autorizaciones (id,id_credito,estatus,fecha,fecha_confirmacion) VALUES(?,?,?,?,?)";
 	private String qrySelect = "SELECT * FROM credito_autorizaciones";
 	private String qrySeletById = "SELECT * FROM credito_autorizaciones WHERE ID_CREDITO = ? limit 1";
+	private String qryDelete = "DELETE FROM credito_autorizaciones WHERE ID_CREDITO = ? ";
 
 	@Override
 	public void persistir(AprobacionDto aprobacionDto) {
@@ -67,6 +68,11 @@ public class AprobacionesRepositoryImpl extends SpringJdbcDao implements Aprobac
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
+	}
+
+	@Override
+	public void eliminar(String idCredito) {
+		jdbcTemplate.update(qryDelete, idCredito);
 	}
 
 }

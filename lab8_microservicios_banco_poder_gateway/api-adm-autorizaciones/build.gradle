@@ -21,12 +21,12 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: com.bmuschko.gradle.docker.DockerRemoteApiPlugin
 
 
-group = 'com.segurosguadalupe.administracion'
+group = 'com.banco.poder.administracion'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 jar {
-  baseName = 'api-seguros-guadalupe-administracion'
+  baseName = 'api-administracion'
   version = ''
 }
 
@@ -54,6 +54,7 @@ dependencies {
   compile('org.springframework.cloud:spring-cloud-starter-eureka')
   runtime 'org.jolokia:jolokia-core' 
   compile 'io.dropwizard.metrics:metrics-core'
+    compile('org.springframework.boot:spring-boot-starter-amqp')
 }
 
 dependencyManagement {
@@ -67,17 +68,17 @@ task createDockerfile(type: com.bmuschko.gradle.docker.tasks.image.Dockerfile) {
   destFile = project.file('build/libs/Dockerfile')
   from 'openjdk:8u151-jre-slim'
   maintainer 'jovaniac@gmail.com"'
-  copyFile 'api-seguros-guadalupe-administracion.jar', '/opt/api-seguros-guadalupe-administracion.jar'
+  copyFile 'api-administracion.jar', '/opt/api-administracion.jar'
 
   exposePort 8082
-  entryPoint 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/opt/api-seguros-guadalupe-administracion.jar'
+  entryPoint 'java', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/opt/api-administracion.jar'
 }
 
 
 task buildImage(type: com.bmuschko.gradle.docker.tasks.image.DockerBuildImage) {
   dependsOn createDockerfile
   inputDir = createDockerfile.destFile.parentFile
-  tag = 'jovaniac/api-seguros-guadalupe-administracion-gateway:' + project.version.toLowerCase()
+  tag = 'jovaniac/api-administracion-gateway:' + project.version.toLowerCase()
 }
 
 task pushImage(type: com.bmuschko.gradle.docker.tasks.image.DockerPushImage) {

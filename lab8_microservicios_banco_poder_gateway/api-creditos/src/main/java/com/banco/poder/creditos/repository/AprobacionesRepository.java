@@ -11,4 +11,6 @@ public interface AprobacionesRepository {
 	List<AprobacionDto> obtenerTodo();
 
 	AprobacionDto obtenerById(String idCredito);
+	
+	void eliminar(String idCredito);
 }

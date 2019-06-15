@@ -11,4 +11,6 @@ public interface PagosRepository {
 	PagosDto consultarById(String id);
 
 	PagosDto persistir(PagosDto pagosDto,String idCredito);
+	
+	void eliminar(String idCredito);
 }

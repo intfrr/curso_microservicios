@@ -56,11 +56,31 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
 
-    api-seguros-guadalupe-administracion:
+    api-administracion:
         path: /administracion/v1/**
-        serviceId: api-seguros-guadalupe-administracion
+        serviceId: api-administracion
         stripPrefix: false
         sensitiveHeaders:
+   
+    api-empleados:
+        path: /empleados/v1/**
+        serviceId: api-empleados
+        stripPrefix: false
+        sensitiveHeaders:
+   
+   
+    api-clientes:
+        path: /clientes/v1/**
+        serviceId: api-clientes
+        stripPrefix: false
+        sensitiveHeaders:
+    
+    api-creditos:
+        path: /creditos/v1/**
+        serviceId: api-creditos
+        stripPrefix: false
+        sensitiveHeaders:
+        
 
     notification-service:
         path: /notification/**

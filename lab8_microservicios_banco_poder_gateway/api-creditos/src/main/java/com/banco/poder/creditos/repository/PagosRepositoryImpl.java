@@ -16,6 +16,7 @@ public class PagosRepositoryImpl extends SpringJdbcDao implements PagosRepositor
 	private String qryInsert = "INSERT INTO credito_pagos (id,id_credito,id_concepto,importe,fecha) VALUES (?,?,?,?,?)";
 	private String qrySelect = "SELECT * FROM credito_pagos a,  conceptos_pago b WHERE a.id_credito = ? AND a.id_concepto=b.id";
 	private String qrySelectById = "SELECT * FROM credito_pagos a,  conceptos_pago b WHERE a.id = ? AND a.id_concepto=b.id";
+	private String qryDelete = "DELETE FROM credito_pagos a WHERE a.id_credito";
 
 	@Override
 	public List<PagosDto> consultarTodo(String id) {
@@ -70,5 +71,11 @@ public class PagosRepositoryImpl extends SpringJdbcDao implements PagosRepositor
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
+	}
+
+	@Override
+	public void eliminar(String idCredito) {
+		jdbcTemplate.update(qryDelete, idCredito);
+		
 	}
 }

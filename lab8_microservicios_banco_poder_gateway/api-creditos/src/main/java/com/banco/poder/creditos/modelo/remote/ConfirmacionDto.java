@@ -1,9 +1,12 @@
 package com.banco.poder.creditos.modelo.remote;
 
+import com.banco.poder.creditos.modelo.CreditosDto;
+
 public class ConfirmacionDto {
 
 	private Boolean autorizacion;
-	private String idSeguro;
+	private String idAutorizacion;
+	private String datosValidacion;
 
 	public Boolean getAutorizacion() {
 		return autorizacion;
@@ -13,12 +16,20 @@ public class ConfirmacionDto {
 		this.autorizacion = autorizacion;
 	}
 
-	public String getIdSeguro() {
-		return idSeguro;
+	public String getIdAutorizacion() {
+		return idAutorizacion;
 	}
 
-	public void setIdSeguro(String idSeguro) {
-		this.idSeguro = idSeguro;
+	public void setIdAutorizacion(String idAutorizacion) {
+		this.idAutorizacion = idAutorizacion;
+	}
+
+	public String getDatosValidacion() {
+		return datosValidacion;
+	}
+
+	public void setDatosValidacion(String datosValidacion) {
+		this.datosValidacion = datosValidacion;
 	}
 
 }

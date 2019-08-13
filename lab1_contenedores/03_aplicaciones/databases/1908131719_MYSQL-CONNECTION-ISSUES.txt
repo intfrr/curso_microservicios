@@ -1,0 +1,208 @@
+localhost
+http://localhost:8080/#47011
+
+curso_microservicios_ci-cd/Jenkinsfile at master · jovaniac/curso_microservicios_ci-cd
+https://github.com/jovaniac/curso_microservicios_ci-cd/blob/master/Jenkinsfile
+
+www.google.com.mx
+https://www.google.com.mx/search?client=opera&biw=1200&bih=680&tbm=isch&sa=1&ei=sCdEXfucO8W4sQWc_IbgCQ&q=highly+detailed+sequence+diagram+example+http+post&oq=highly+detailed+sequence+diagram+example+http+post&gs_l=img.3...55272.58400..58741...5.0..0.91.518.6......0....1..gws-wiz-img.-5AkeJDRH5k&ved=0ahUKEwj7tJC1k-TjAhVFXKwKHRy-AZwQ4dUDCAY&uact=5#imgrc=uxKpxqLPY2nScM:
+
+A Distributed, Asynchronous RESTful Framework Prototype - DZone Integration
+https://dzone.com/articles/a-distributed-asynchronous-restful-microservice-pl
+
+mysql command line port - Google Search
+https://www.google.com.mx/search?client=opera&q=mysql+command+line+port&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Connect to different port using MySql Command Line Client - Stack Overflow
+https://stackoverflow.com/questions/54643713/connect-to-different-port-using-mysql-command-line-client
+
+Plugin caching_sha2_password could not be loaded: dlopen docker - Google Search
+https://www.google.com.mx/search?client=opera&q=Plugin+caching_sha2_password+could+not+be+loaded%3A+dlopen+docker&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+mysql - Authentication plugin 'caching_sha2_password' cannot be loaded - Stack Overflow
+https://stackoverflow.com/questions/49194719/authentication-plugin-caching-sha2-password-cannot-be-loaded
+
+Authentication plugin 'caching_sha2_password' cannot be loaded · Issue #103 · passbolt/passbolt_docker
+https://github.com/passbolt/passbolt_docker/issues/103
+
+ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded · Issue #419 · docker-library/mysql
+https://github.com/docker-library/mysql/issues/419
+
+Failed to load caching_sha2_password authentication plugin [Solved] | TablePlus
+https://tableplus.io/blog/2018/07/failed-to-load-caching-sha2-password-authentication-plugin-solved.html
+
+Run and Connect to MySQL on Docker | Toshimaru’s Blog
+https://blog.toshima.ru/2018/09/16/docker-run-mysql.html
+
+mysql - Authentication plugin 'caching_sha2_password' cannot be loaded - Stack Overflow
+https://stackoverflow.com/questions/49194719/authentication-plugin-caching-sha2-password-cannot-be-loaded
+
+How to connect to mySQL docker image outside the container
+https://medium.com/@clerton/how-to-connect-to-mysql-docker-image-outside-the-container-21aa7f259e72
+
+docker --rm - Google Search
+https://www.google.com.mx/search?client=opera&q=docker+--rm&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+docker run: why use --rm (docker newbie) - Stack Overflow
+https://stackoverflow.com/questions/49726272/docker-run-why-use-rm-docker-newbie
+
+
+
+
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------
+
+
+
+localhost
+http://localhost:8080/#47011
+
+curso_microservicios_ci-cd/Jenkinsfile at master · jovaniac/curso_microservicios_ci-cd
+https://github.com/jovaniac/curso_microservicios_ci-cd/blob/master/Jenkinsfile
+
+www.google.com.mx
+https://www.google.com.mx/search?client=opera&biw=1200&bih=680&tbm=isch&sa=1&ei=sCdEXfucO8W4sQWc_IbgCQ&q=highly+detailed+sequence+diagram+example+http+post&oq=highly+detailed+sequence+diagram+example+http+post&gs_l=img.3...55272.58400..58741...5.0..0.91.518.6......0....1..gws-wiz-img.-5AkeJDRH5k&ved=0ahUKEwj7tJC1k-TjAhVFXKwKHRy-AZwQ4dUDCAY&uact=5#imgrc=uxKpxqLPY2nScM:
+
+A Distributed, Asynchronous RESTful Framework Prototype - DZone Integration
+https://dzone.com/articles/a-distributed-asynchronous-restful-microservice-pl
+
+docker mysql default root - Google Search
+https://www.google.com.mx/search?client=opera&q=docker+mysql+default+root&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+mysql - Docker Hub
+https://hub.docker.com/_/mysql
+
+change mysql password - Google Search
+https://www.google.com.mx/search?client=opera&q=change+mysql+password&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Reset a MySQL root password
+https://support.rackspace.com/how-to/mysql-resetting-a-lost-mysql-root-password/
+
+systemctl command not found debian - Google Search
+https://www.google.com.mx/search?client=opera&q=systemctl+command+not+found+debian&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Restart systemctl*daemon​ - systemctl command not found
+https://www.linuxquestions.org/questions/linux-newbie-8/restart-systemctl%2Adaemon-systemctl-command-not-found-4175617392/
+
+How to prevent a service installed on a Debian system from automatically being enabled | The Linux Page
+https://linux.m2osw.com/how-prevent-service-installed-debian-system-automatically-being-enabled
+
+systemctl reload sshd - command not found error - YouTube
+https://www.youtube.com/watch?v=eGv4PCcu-hU
+
+How to Switch to systemd on Debian Wheezy – scottlinux.com | Linux Blog
+https://scottlinux.com/2014/10/20/how-to-switch-to-systemd-on-debian-wheezy/
+
+service list all - Google Search
+https://www.google.com.mx/search?client=opera&q=service+list+all&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+10.04 - How do you get a list of all starting services? - Ask Ubuntu
+https://askubuntu.com/questions/57909/how-do-you-get-a-list-of-all-starting-services
+
+How to List All Running Services in Linux | RoseHosting
+https://www.rosehosting.com/blog/how-to-list-all-services-in-linux/
+
+ps: command not found - Google Search
+https://www.google.com.mx/search?client=opera&q=ps%3A+command+not+found&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Wheezy: "ps: command not found" · Issue #13 · tianon/docker-brew-debian
+https://github.com/tianon/docker-brew-debian/issues/13
+
+debian - ps command doesn't work in docker container - Stack Overflow
+https://stackoverflow.com/questions/26982274/ps-command-doesnt-work-in-docker-container
+
+change root mysql docker - Google Search
+https://www.google.com.mx/search?client=opera&q=change+root+mysql+docker&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Change mysql password in Docker container - Stack Overflow
+https://stackoverflow.com/questions/48249912/change-mysql-password-in-docker-container
+
+docker exec | Docker Documentation
+https://docs.docker.com/engine/reference/commandline/exec/
+
+mysql/mysql-docker: Dockerfiles and scripts for MySQL products
+https://github.com/mysql/mysql-docker#connecting-to-mysql-server-from-within-the-container
+
+mysql user & password won't change no matter what I do · Issue #1260 · laradock/laradock
+https://github.com/laradock/laradock/issues/1260
+
+How to recover root password? · Issue #99 · docker-library/mariadb
+https://github.com/docker-library/mariadb/issues/99
+
+docker mysql-db password - Google Search
+https://www.google.com.mx/search?client=opera&hs=PFt&ei=ZqVSXd2PAdLatQaOnLFo&q=docker+mysql-db+password&oq=docker+mysql-db+password&gs_l=psy-ab.3..33i22i29i30.162460.166065..166465...0.0..0.205.1307.0j10j1......0....1..gws-wiz.......0i71j35i39j0i7i30j0i30j0i8i30j0i22i30j33i10.qkhHkD_1uzI&ved=0ahUKEwjd2p-i5f_jAhVSbc0KHQ5ODA0Q4dUDCAo&uact=5
+
+How to deploy and use a MySQL Docker container - TechRepublic
+https://www.techrepublic.com/article/how-to-deploy-and-use-a-mysql-docker-container/
+
+Docker Mysql container root password [mysqld listens port 0] - Stack Overflow
+https://stackoverflow.com/questions/39664141/docker-mysql-container-root-password-mysqld-listens-port-0
+
+Backup and restore a mysql database from a running Docker mysql container
+https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb
+
+Creating a docker mysql container with a prepared database scheme - Server Fault
+https://serverfault.com/questions/796762/creating-a-docker-mysql-container-with-a-prepared-database-scheme
+
+MYSQL_ROOT_PASSWORD secret --name mysql-db docker - Google Search
+https://www.google.com.mx/search?client=opera&hs=BMt&ei=CqdSXbXSF_HstQbb97ygCA&q=MYSQL_ROOT_PASSWORD+secret+--name+mysql-db+docker&oq=MYSQL_ROOT_PASSWORD+secret+--name+mysql-db+docker&gs_l=psy-ab.3...14894.15303..16010...0.0..0.95.184.2......0....2j1..gws-wiz.......0i71.l7QyWKkr914&ved=0ahUKEwi1_9jq5v_jAhVxds0KHds7D4QQ4dUDCAo&uact=5
+
+Como crear un contenedor con Docker-Mysql y persistir la información
+https://platzi.com/tutoriales/1432-docker/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/
+
+MySQL is not creating superuser for specified MYSQL_DATABASE · Issue #539 · docker-library/mysql
+https://github.com/docker-library/mysql/issues/539
+
+Docker MySQL Tutorial
+https://codereviewvideos.com/course/docker-tutorial-for-beginners/video/docker-mysql-tutorial
+
+mysql - Create database on docker-compose startup - Stack Overflow
+https://stackoverflow.com/questions/43322033/create-database-on-docker-compose-startup
+
+Crear un REST API con Spring Boot, Hibernate y MySQL | SAID MORALES LEMUS
+http://saidmorales.com/java/hibernate/2018/12/30/hibernate-rest-api.html
+
+mysql command line port - Google Search
+https://www.google.com.mx/search?client=opera&hs=uQt&ei=L6hSXduoCcTLtQaorqyIDQ&q=mysql+command+line+port&oq=mysql+command+line+port&gs_l=psy-ab.3..0i7i30l8.18583.22932..23006...1.0..0.129.1488.0j13......0....1..gws-wiz.......0i71j35i304i39j35i39j0i203j0i13.Low4RCJG_7o&ved=0ahUKEwib_KX25__jAhXEZc0KHSgXC9EQ4dUDCAo&uact=5
+
+Why does the MySQL command line tool ignore the --port parameter? - Server Fault
+https://serverfault.com/questions/306421/why-does-the-mysql-command-line-tool-ignore-the-port-parameter
+
+MySQL :: MySQL 8.0 Reference Manual :: 4.2.4 Connecting to the MySQL Server Using Command Options
+https://dev.mysql.com/doc/refman/8.0/en/connecting.html
+
+MySQL: connecting to different ports on localhost - lxadm | Linux administration tips, tutorials, HOWTOs and articles
+https://lxadm.com/MySQL:_connecting_to_different_ports_on_localhost
+
+ERROR 1045 (28000): Plugin caching_sha2_password could not be loaded: dlopen /usr/local/Cellar/mariadb - Google Search
+https://www.google.com.mx/search?client=opera&q=ERROR+1045+(28000)%3A+Plugin+caching_sha2_password+could+not+be+loaded%3A+dlopen+%2Fusr%2Flocal%2FCellar%2Fmariadb&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Failed to load caching_sha2_password authentication plugin [Solved] | TablePlus
+https://tableplus.io/blog/2018/07/failed-to-load-caching-sha2-password-authentication-plugin-solved.html
+
+mysql - Authentication plugin 'caching_sha2_password' cannot be loaded - Stack Overflow
+https://stackoverflow.com/questions/49194719/authentication-plugin-caching-sha2-password-cannot-be-loaded
+
+Public Key Retrieval is not allowed - Google Search
+https://www.google.com.mx/search?client=opera&q=Public+Key+Retrieval+is+not+allowed&sourceid=opera&ie=UTF-8&oe=UTF-8
+
+Connection Java-MySql : Public Key Retrieval is not allowed - Stack Overflow
+https://stackoverflow.com/questions/50379839/connection-java-mysql-public-key-retrieval-is-not-allowed
+
+Solved: MySQL Public Key Retrieval is not allowed
+https://community.atlassian.com/t5/Confluence-questions/MySQL-Public-Key-Retrieval-is-not-allowed/qaq-p/778956
+
+dbeaver mysql no ssl - Google Search
+https://www.google.com.mx/search?client=opera&hs=lEE&ei=PKpSXcCBKIWztQaZirn4Ag&q=dbeaver+mysql+no+ssl&oq=dbeaver+mysql+no+ssl&gs_l=psy-ab.3...3176.6131..6430...0.0..0.128.832.0j7......0....1..gws-wiz.......0i71j0i13.QWR27fIQprM&ved=0ahUKEwjAj_Dw6f_jAhWFWc0KHRlFDi8Q4dUDCAo&uact=5
+
+ssl connection working in MySQL Workbench, but not in DBeaver - Stack Overflow
+https://stackoverflow.com/questions/39514212/ssl-connection-working-in-mysql-workbench-but-not-in-dbeaver
+
+DBeaver Forum • View topic - How to submit the mysql client ssl cert?
+https://dbeaver.io/forum/viewtopic.php?f=2&t=1401
+

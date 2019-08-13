@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   discovery-server:
-    image: jovaniac/eureka-discovery:0.0.1-snapshot
+    image: jovaniac/eureka-discovery-observability:0.0.1-snapshot
     ports:
       - 8761:8761
   influxdb:
@@ -23,7 +23,7 @@ services:
        - influxdb
     restart: always
   servicio-cliente:
-    image: jovaniac/servicio-cliente-monitor:0.0.1-monitoreo
+    image: jovaniac/servicio-cliente-observability:0.0.1-snapshot
     environment:
       - INFLUX_HOST=influxdb
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
@@ -33,7 +33,7 @@ services:
       - discovery-server
       - influxdb
   servicio-creditos:
-    image: jovaniac/servicio-creditos-monitor:0.0.1-monitoreo
+    image: jovaniac/servicio-creditos-observability:0.0.1-snapshot
     environment:
       - INFLUX_HOST=influxdb
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
